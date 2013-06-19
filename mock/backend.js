@@ -45,7 +45,7 @@ var SKIPSETUP = process.argv[2] === '--skip-setup' || process.argv[3] === '--ski
       },
       appliedScenarios: {
         os: 'osx',
-        location: 'nyc',
+        location: 'tehran',
         internet: 'true',
         updateAvailable: 'false',
         gtalkAuthorized: 'true',
@@ -102,7 +102,7 @@ MockBackend.prototype.reset = function() {
   if (SKIPSETUP) {
     MockBackend._handlerForModal[MODAL.authorize].call(this, INTERACTION.continue);
     this._internalState.lastModal = MODAL.none;
-    this.sync({'/modal': MODAL.none, '/showVis': true, '/setupComplete': true, '/settings/mode': MODE.give});
+    this.sync({'/modal': MODAL.none, '/showVis': true, '/setupComplete': true, '/settings/mode': MODE.get});
   }
 };
 
